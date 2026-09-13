@@ -30,7 +30,7 @@ a { color: var(--link-color); }
 }
 
 .nav-container {
-  max-width: 1180px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ a { color: var(--link-color); }
 
 /* --- MAIN CONTENT CONTAINER --- */
 .main-container {
-  max-width: 1180px;
+  max-width: 850px;
   margin: 40px auto;
   background: var(--bg-color);
   border-radius: 8px;
@@ -98,7 +98,7 @@ a { color: var(--link-color); }
 /* --- TEXT CONTENT AREA --- */
 .content-area { padding: 50px 60px; }
 .content-area h2 { font-size: 1.5rem; margin-top: 0; margin-bottom: 25px; font-weight: 600; color: #1a1a1a; }
-.content-area p { line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem; color: #444; max-width: 700px; }
+.content-area p { line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem; color: #444; }
 .content-area .page-intro { color: var(--text-muted); font-size: 1rem; margin-bottom: 36px; }
 
 /* --- Callout --- */
@@ -128,7 +128,7 @@ a { color: var(--link-color); }
 .cv-role { font-size: 1.08rem; font-weight: 600; color: #1a1a1a; margin: 0; }
 .cv-dates { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
 .cv-org { font-size: 0.92rem; color: var(--link-color); margin: 2px 0 8px; }
-.cv-desc { font-size: 0.96rem; color: var(--text-muted); margin: 0; line-height: 1.7; max-width: 720px; }
+.cv-desc { font-size: 0.96rem; color: var(--text-muted); margin: 0; line-height: 1.7; }
 
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 32px; }
 .skill-group-name { font-size: 0.82rem; color: var(--link-color); margin: 0 0 6px; font-weight: 600; }
@@ -152,7 +152,7 @@ a { color: var(--link-color); }
 .project-item:first-child { border-top: none; padding-top: 0; }
 .project-title { font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin: 0 0 4px; }
 .project-meta { font-size: 0.86rem; color: var(--link-color); margin: 0 0 14px; }
-.project-desc { font-size: 0.98rem; color: var(--text-muted); margin: 0 0 16px; line-height: 1.75; max-width: 700px; }
+.project-desc { font-size: 0.98rem; color: var(--text-muted); margin: 0 0 16px; line-height: 1.75; }
 
 .video-embed { position: relative; width: 100%; max-width: 560px; padding-top: 56.25%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.12); margin: 4px 0; }
 .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
