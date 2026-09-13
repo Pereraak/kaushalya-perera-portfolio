@@ -4,272 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaushalya Perera - Academic Portfolio</title>
-  
-  <!-- FontAwesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --text-color: #333333;
-      --text-muted: #555555;
-      --bg-color: #ffffff;
-      --link-color: #0366d6;
-      --border-color: #eaeaea;
-      --body-bg: #f8f9fa;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      color: var(--text-color);
-      background-color: var(--body-bg);
-    }
-
-    /* --- TOP NAVIGATION --- */
-    .navbar {
-      background-color: var(--bg-color);
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      padding: 18px 20px;
-      gap: 35px;
-      flex-wrap: wrap;
-    }
-
-    .nav-container a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-
-    .nav-container a:hover, .nav-container a.active {
-      color: var(--link-color);
-    }
-
-    /* --- MAIN CONTENT CONTAINER --- */
-    .main-container {
-      max-width: 850px;
-      margin: 40px auto;
-      background: var(--bg-color);
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      overflow: hidden;
-    }
-
-    /* --- BANNER --- */
-    .banner {
-      width: 100%;
-      height: 220px;
-      /* Replace this URL with any banner image she wants */
-      background-image: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2000&auto=format&fit=crop'); 
-      background-size: cover;
-      background-position: center;
-      background-color: #e9ecef;
-    }
-
-    /* --- PROFILE HEADER --- */
-    .profile-header {
-      text-align: center;
-      padding: 0 40px 30px 40px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .avatar {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 5px solid var(--bg-color);
-      margin-top: -80px; 
-      object-fit: cover;
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .profile-header h1 {
-      margin: 15px 0 5px 0;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1a1a1a;
-    }
-
-    .profile-header .title {
-      font-size: 1.1rem;
-      color: var(--text-color);
-      margin: 0 0 5px 0;
-      font-weight: 500;
-    }
-
-    .profile-header .affiliation {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin: 0 0 20px 0;
-      line-height: 1.5;
-    }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-    }
-
-    .social-links a {
-      color: #666;
-      font-size: 1.3rem;
-      text-decoration: none;
-      transition: color 0.2s, transform 0.2s;
-    }
-
-    .social-links a:hover {
-      color: var(--link-color);
-      transform: translateY(-2px);
-    }
-
-    /* --- TEXT CONTENT AREA --- */
-    .content-area {
-      padding: 50px 60px;
-    }
-
-    .content-area h2 {
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 25px;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
-
-    .content-area p {
-      line-height: 1.8;
-      margin-bottom: 20px;
-      font-size: 1.05rem;
-      color: #444;
-    }
-
-    /* --- FOOTER --- */
-    .footer {
-      text-align: center;
-      color: #888;
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border-color);
-      background-color: var(--bg-color);
-      display: flex;
-      justify-content: space-between;
-      padding: 25px 60px;
-    }
-
-    .footer a {
-      color: #888;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: var(--link-color);
-    }
-
-    /* --- MOBILE RESPONSIVENESS --- */
-    @media (max-width: 768px) {
-      .nav-container {
-        gap: 15px;
-        padding: 15px;
-      }
-      .main-container {
-        margin: 20px;
-        border-radius: 0;
-      }
-      .content-area {
-        padding: 30px 25px;
-      }
-      .footer {
-        flex-direction: column;
-        gap: 10px;
-        padding: 25px;
-      }
-      .banner {
-        height: 160px;
-      }
-      .avatar {
-        width: 130px;
-        height: 130px;
-        margin-top: -65px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- TOP NAVIGATION -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="active">Home</a>
-      <a href="#">Publications</a>
-      <a href="#">Projects</a>
-      <a href="#">CV</a>
-      <a href="#">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="presentations.html">Presentations</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- MAIN WRAPPER -->
   <main class="main-container">
-    
-    <!-- HEADER: BANNER & PROFILE -->
+
     <header>
-      <div class="banner"></div>
+      <div class="banner">
+        <svg viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0f2b46"/>
+              <stop offset="55%" stop-color="#0d4a86"/>
+              <stop offset="100%" stop-color="#0366d6"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="220" fill="url(#bannerGrad)"/>
+          <g fill="#FFFFFF">
+            <circle cx="90" cy="55" r="40" opacity="0.07"/><circle cx="90" cy="55" r="12" opacity="0.15"/>
+            <circle cx="220" cy="155" r="28" opacity="0.06"/><circle cx="220" cy="155" r="8" opacity="0.14"/>
+            <circle cx="480" cy="42" r="20" opacity="0.08"/><circle cx="480" cy="42" r="6" opacity="0.17"/>
+            <circle cx="610" cy="175" r="44" opacity="0.05"/><circle cx="610" cy="175" r="14" opacity="0.12"/>
+            <circle cx="990" cy="165" r="34" opacity="0.06"/><circle cx="990" cy="165" r="10" opacity="0.14"/>
+            <circle cx="1130" cy="50" r="22" opacity="0.08"/><circle cx="1130" cy="50" r="7" opacity="0.17"/>
+          </g>
+          <g fill="#FFFFFF" opacity="0.13">
+            <path d="M330 110 C 365 88, 415 88, 452 108 C 440 120, 418 132, 393 132 C 370 132, 347 123, 330 110 Z"/>
+            <path d="M330 110 L 303 97 L 311 112 L 303 127 Z"/>
+          </g>
+          <g stroke="#FFFFFF" stroke-width="2" opacity="0.18" fill="none">
+            <path d="M352 96 C 363 107, 363 118, 352 129"/><path d="M372 92 C 385 107, 385 118, 372 133"/><path d="M394 90 C 407 107, 407 120, 394 135"/>
+          </g>
+          <g fill="#FFFFFF" opacity="0.1" transform="translate(790,55) scale(0.82)">
+            <path d="M330 110 C 365 88, 415 88, 452 108 C 440 120, 418 132, 393 132 C 370 132, 347 123, 330 110 Z"/>
+            <path d="M330 110 L 303 97 L 311 112 L 303 127 Z"/>
+          </g>
+          <g stroke="#FFFFFF" stroke-width="2" opacity="0.15" fill="none" transform="translate(790,55) scale(0.82)">
+            <path d="M352 96 C 363 107, 363 118, 352 129"/><path d="M372 92 C 385 107, 385 118, 372 133"/><path d="M394 90 C 407 107, 407 120, 394 135"/>
+          </g>
+        </svg>
+      </div>
       <div class="profile-header">
-        
-        <!-- IMAGE UPDATED TO photo.jpg -->
-        <img src="photo.jpg" alt="Kaushalya Perera" class="avatar" onerror="this.src='photo.png'">
-        
+        <img src="photo.jpg" alt="Kaushalya Perera" class="avatar">
         <h1>Kaushalya Perera, PhD</h1>
-        <p class="title">Postdoctoral Researcher</p>
-        <p class="affiliation">School of Medicine<br>Deakin University</p>
-        
+        <p class="title">Immunologist &amp; Molecular Biologist</p>
+        <p class="affiliation">PhD in Medicine<br>Deakin University</p>
         <div class="social-links">
-          <a href="https://scholar.google.com/citations?user=xdtrecEAAAAJ" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="mailto:aklperera@yahoo.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="https://www.researchgate.net/profile/Kaushalya-Perera-5" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
+          <a href="https://linkedin.com/in/aklperera" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://orcid.org/0000-0002-1232-2627" target="orcid.widget" rel="me noopener noreferrer" title="ORCID"><i class="fab fa-orcid"></i></a>
         </div>
       </div>
     </header>
 
-    <!-- ABOUT ME TEXT -->
     <section class="content-area">
       <h2>About me</h2>
-      <p>
-        I am a postdoctoral researcher in Immunology at Deakin University's School of Medicine. My research explores vertebrate immunity by focusing on the incredible ability of natural killer (NK) cells to target cancerous and virus-infected cells, paving the way for alternative cell-based immunotherapies.
-      </p>
-      <p>
-        I utilize <em>zebrafish</em> models—whose immune defense systems are remarkably similar to humans—to investigate the movements and mechanisms of these fast and powerful cellular defenders. By employing fluorescent tracking and transgenic modeling, my work aims to uncover how these cells help keep us safe from disease.
-      </p>
-      <p>
-        I hold a PhD in the field of zebrafish immunology. Prior to my current postdoctoral research on NK cells, my studies focused on infectious diseases and understanding how the immune system reacts to invading pathogens.
-      </p>
-      <p>
-        In 2023, I was honored to win Deakin University's Visualise Your Thesis (VYT) competition for my presentation on NK cells as "super immune warriors." Additional information about my ongoing work in zebrafish hematopoiesis and immunology can be found in the publications and projects sections.
-      </p>
+      <p>I am an immunologist and molecular biologist with a <strong>PhD in Medicine</strong> from Deakin University, where my doctoral research focused on identifying marker candidates for Natural Killer cells in a zebrafish model. My work bridges <strong>immune cell biology</strong>, <strong>molecular assay development</strong>, and <strong>bioinformatics</strong> — from designing a transgenic zebrafish model and CRISPR-based mutants, to analysing single-cell sequencing data and gene promoter motifs.</p>
+
+      <p>Before starting my PhD, I worked as a Scientific Officer at a hospital diagnostic laboratory in Sri Lanka, developing and validating immunological assays within an ISO-certified quality system. That experience shaped my interest in translating research technique into rigorous, audit-ready laboratory practice.</p>
+
+      <p>Alongside the bench work, I've supervised and mentored junior researchers and contributed to a systematic review published in <em>PLOS Computational Biology</em>. More on my research can be found under <a href="projects.html">Projects</a> and <a href="publications.html">Publications</a>, and my full background under <a href="cv.html">CV</a>.</p>
+
+      <div class="callout">
+        <span class="medal">🏆</span>
+        <span><strong>My PhD thesis video won Deakin University's "Visualise Your Thesis" competition in 2023.</strong> Watch it on the <a href="projects.html">Projects</a> page, or <a href="https://www.youtube.com/watch?v=YO1yZsN7ZFU" target="_blank" rel="noopener">directly on YouTube</a>.</span>
+      </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div>&copy; 2026 Kaushalya Perera</div>
-      <div><a href="#">Deakin University</a></div>
+      <div><a href="https://www.deakin.edu.au" target="_blank" rel="noopener">Deakin University</a></div>
     </footer>
 
   </main>
