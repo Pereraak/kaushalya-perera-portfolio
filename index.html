@@ -8,17 +8,17 @@
   <!-- FontAwesome for Social Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts for a clean academic look -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      var(--primary-color): #2c3e50;
       --text-color: #333333;
+      --text-muted: #555555;
       --bg-color: #ffffff;
-      --sidebar-bg: #f8f9fa;
       --link-color: #0366d6;
       --border-color: #eaeaea;
+      --body-bg: #f8f9fa;
     }
 
     * {
@@ -26,217 +26,253 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      font-family: 'Inter', sans-serif;
       color: var(--text-color);
-      background: var(--bg-color);
+      background-color: var(--body-bg);
     }
 
-    .container {
-      display: flex;
-      min-height: 100vh;
-      max-width: 1200px;
-      margin: 0 auto;
-      box-shadow: 0 0 20px rgba(0,0,0,0.03);
-    }
-
-    /* --- SIDEBAR DESIGN --- */
-    .sidebar {
-      width: 320px;
-      background: var(--sidebar-bg);
-      padding: 50px 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border-right: 1px solid var(--border-color);
-    }
-
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .sidebar h1 {
-      font-size: 1.4rem;
-      margin: 0 0 8px 0;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .sidebar h2 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #555;
-      margin: 0 0 5px 0;
-    }
-
-    .sidebar p {
-      font-size: 0.9rem;
-      color: #777;
-      margin: 0 0 25px 0;
-      line-height: 1.4;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .social-links a {
-      color: #666;
-      font-size: 1.2rem;
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-
-    .social-links a:hover {
-      color: var(--link-color);
-    }
-
-    /* --- MAIN CONTENT DESIGN --- */
-    .main-content {
-      flex: 1;
-      padding: 40px 80px;
-      background: #fff;
-    }
-
-    .nav {
-      display: flex;
-      gap: 25px;
-      margin-bottom: 40px;
+    /* --- TOP NAVIGATION --- */
+    .navbar {
+      background-color: var(--bg-color);
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      padding: 18px 20px;
+      gap: 35px;
       flex-wrap: wrap;
     }
 
-    .nav a {
+    .nav-container a {
       text-decoration: none;
-      color: #555;
+      color: var(--text-color);
       font-weight: 500;
       font-size: 0.95rem;
       transition: color 0.2s;
     }
 
-    .nav a:hover, .nav a.active {
+    .nav-container a:hover, .nav-container a.active {
       color: var(--link-color);
     }
 
-    .content-section {
-      line-height: 1.7;
+    /* --- MAIN CONTENT CONTAINER --- */
+    .main-container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: var(--bg-color);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    /* --- BANNER --- */
+    .banner {
+      width: 100%;
+      height: 220px;
+      /* Replace this URL with any banner image she wants */
+      background-image: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2000&auto=format&fit=crop'); 
+      background-size: cover;
+      background-position: center;
+      background-color: #e9ecef;
+    }
+
+    /* --- PROFILE HEADER --- */
+    .profile-header {
+      text-align: center;
+      padding: 0 40px 30px 40px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid var(--bg-color);
+      margin-top: -80px; 
+      object-fit: cover;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .profile-header h1 {
+      margin: 15px 0 5px 0;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .profile-header .title {
+      font-size: 1.1rem;
+      color: var(--text-color);
+      margin: 0 0 5px 0;
+      font-weight: 500;
+    }
+
+    .profile-header .affiliation {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .social-links a {
+      color: #666;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .social-links a:hover {
+      color: var(--link-color);
+      transform: translateY(-2px);
+    }
+
+    /* --- TEXT CONTENT AREA --- */
+    .content-area {
+      padding: 50px 60px;
+    }
+
+    .content-area h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .content-area p {
+      line-height: 1.8;
+      margin-bottom: 20px;
       font-size: 1.05rem;
       color: #444;
     }
 
-    .content-section h3 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-    
-    .content-section p {
-      margin-bottom: 20px;
-    }
-
+    /* --- FOOTER --- */
     .footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-color);
-      font-size: 0.85rem;
+      text-align: center;
       color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-color);
       display: flex;
       justify-content: space-between;
+      padding: 25px 60px;
+    }
+
+    .footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--link-color);
     }
 
     /* --- MOBILE RESPONSIVENESS --- */
-    @media (max-width: 850px) {
-      .container {
-        flex-direction: column;
+    @media (max-width: 768px) {
+      .nav-container {
+        gap: 15px;
+        padding: 15px;
       }
-      .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 40px 20px;
+      .main-container {
+        margin: 20px;
+        border-radius: 0;
       }
-      .main-content {
+      .content-area {
         padding: 30px 25px;
       }
-      .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+      .footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 25px;
+      }
+      .banner {
+        height: 160px;
+      }
+      .avatar {
+        width: 130px;
+        height: 130px;
+        margin-top: -65px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- LEFT SIDEBAR -->
-    <aside class="sidebar">
-      <!-- REPLACE SRC WITH HER GITHUB IMAGE URL -->
-      <img src="photo.jpg">
-      
-      <h1>Kaushalya Perera</h1>
-      <h2>PhD Researcher</h2>
-      <p>School of Medicine<br>Deakin University</p>
-      
-      <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=xdtrecEAAAAJ" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-        <a href="https://www.researchgate.net/profile/Kaushalya-Perera-5" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-        <a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <!-- TOP NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="active">Home</a>
+      <a href="#">Publications</a>
+      <a href="#">Projects</a>
+      <a href="#">CV</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <!-- MAIN WRAPPER -->
+  <main class="main-container">
+    
+    <!-- HEADER: BANNER & PROFILE -->
+    <header>
+      <div class="banner"></div>
+      <div class="profile-header">
+        
+        <!-- IMAGE UPDATED TO photo.jpg -->
+        <img src="photo.jpg" alt="Kaushalya Perera" class="avatar" onerror="this.src='photo.png'">
+        
+        <h1>Kaushalya Perera, PhD</h1>
+        <p class="title">Postdoctoral Researcher</p>
+        <p class="affiliation">School of Medicine<br>Deakin University</p>
+        
+        <div class="social-links">
+          <a href="https://scholar.google.com/citations?user=xdtrecEAAAAJ" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="https://www.researchgate.net/profile/Kaushalya-Perera-5" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" title="ORCID"><i class="fab fa-orcid"></i></a>
+        </div>
       </div>
-    </aside>
+    </header>
 
-    <!-- RIGHT MAIN CONTENT -->
-    <main class="main-content">
-      
-      <!-- TOP NAVIGATION -->
-      <nav class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Publications</a>
-        <a href="#">Projects</a>
-        <a href="#">CV</a>
-        <a href="#">Contact</a>
-      </nav>
+    <!-- ABOUT ME TEXT -->
+    <section class="content-area">
+      <h2>About me</h2>
+      <p>
+        I am a postdoctoral researcher in Immunology at Deakin University's School of Medicine. My research explores vertebrate immunity by focusing on the incredible ability of natural killer (NK) cells to target cancerous and virus-infected cells, paving the way for alternative cell-based immunotherapies.
+      </p>
+      <p>
+        I utilize <em>zebrafish</em> models—whose immune defense systems are remarkably similar to humans—to investigate the movements and mechanisms of these fast and powerful cellular defenders. By employing fluorescent tracking and transgenic modeling, my work aims to uncover how these cells help keep us safe from disease.
+      </p>
+      <p>
+        I hold a PhD in the field of zebrafish immunology. Prior to my current postdoctoral research on NK cells, my studies focused on infectious diseases and understanding how the immune system reacts to invading pathogens.
+      </p>
+      <p>
+        In 2023, I was honored to win Deakin University's Visualise Your Thesis (VYT) competition for my presentation on NK cells as "super immune warriors." Additional information about my ongoing work in zebrafish hematopoiesis and immunology can be found in the publications and projects sections.
+      </p>
+    </section>
 
-      <!-- ABOUT ME SECTION -->
-      <section class="content-section">
-        <h3>About me</h3>
-        <p>
-          I am a PhD researcher in Immunology at Deakin University's School of Medicine. My research explores vertebrate immunity by focusing on the incredible ability of natural killer (NK) cells to target cancerous and virus-infected cells, paving the way for alternative cell-based immunotherapies.
-        </p>
-        <p>
-          I utilize <em>zebrafish</em> models—whose immune defense systems are remarkably similar to humans—to investigate the movements and mechanisms of these fast and powerful cellular defenders. By employing fluorescent tracking and transgenic modeling, my work aims to uncover how these cells help keep us safe from disease.
-        </p>
-        <p>
-          My academic background includes a Master’s degree in Biotechnology and Bioinformatics and a Bachelor of Science (Biomedical Science - Honours). Prior to my current research on NK cells, my studies focused on infectious diseases and understanding how the immune system reacts to invading pathogens.
-        </p>
-        <p>
-          In 2023, I was honored to win Deakin University's Visualise Your Thesis (VYT) competition for my presentation on NK cells as "super immune warriors." Additional information about my ongoing work in zebrafish hematopoiesis and immunology can be found in the publications and projects sections.
-        </p>
-      </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div>&copy; 2026 Kaushalya Perera</div>
+      <div><a href="#">Deakin University</a></div>
+    </footer>
 
-      <!-- FOOTER -->
-      <footer class="footer">
-        <div>&copy; 2026 Kaushalya Perera</div>
-        <div><a href="#" style="color: #888; text-decoration: none;">Deakin University</a></div>
-      </footer>
-
-    </main>
-  </div>
+  </main>
 
 </body>
 </html>
