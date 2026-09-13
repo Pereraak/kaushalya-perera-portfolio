@@ -3,540 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaushalya Perera — Immunologist & Molecular Biologist</title>
-<meta name="description" content="Portfolio of Kaushalya Perera, PhD — immunologist and molecular biologist specialising in immune cell identification and diagnostic assay development.">
+<title>Kaushalya Perera, PhD</title>
+<meta name="description" content="Kaushalya Perera, PhD — immunologist and molecular biologist specialising in immune cell biology and diagnostic assay development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #F5F5F1;
-    --bg-panel: #EFEDE7;
-    --ink: #211D2B;
-    --ink-soft: #55506A;
-    --indigo: #372F5E;
-    --indigo-deep: #241E3D;
-    --rose: #B25C74;
-    --rose-soft: #E7CBD2;
-    --line: #D8D3CA;
-    --line-soft: #E4E0D8;
-    --serif: "Source Serif 4", Georgia, serif;
-    --sans: "IBM Plex Sans", -apple-system, sans-serif;
-  }
-
-  * { box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a { color: var(--indigo); text-decoration-color: var(--rose); text-underline-offset: 3px; }
-  a:hover { color: var(--rose); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
-
-  .layout {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    max-width: 1180px;
-    margin: 0 auto;
-    min-height: 100vh;
-  }
-
-  /* ---------- Sidebar (specimen label) ---------- */
-
-  .sidebar {
-    position: sticky;
-    top: 0;
-    align-self: start;
-    height: 100vh;
-    padding: 56px 40px 40px 48px;
-    border-right: 1px solid var(--line);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: auto;
-  }
-
-  .id-block {
-    animation: stain-in 0.9s ease-out both;
-  }
-
-  @keyframes stain-in {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .id-block { animation: none; }
-  }
-
-  .id-tag {
-    display: inline-block;
-    font-size: 0.75rem;
-    letter-spacing: 0.02em;
-    color: var(--rose);
-    border: 1px solid var(--rose-soft);
-    background: rgba(178, 92, 116, 0.07);
-    padding: 3px 9px;
-    border-radius: 2px;
-    margin-bottom: 20px;
-  }
-
-  .id-name {
-    font-family: var(--serif);
-    font-size: 2.15rem;
-    font-weight: 600;
-    line-height: 1.15;
-    color: var(--indigo-deep);
-    margin: 0 0 10px;
-  }
-
-  .id-title {
-    font-size: 0.98rem;
-    color: var(--ink-soft);
-    margin: 0 0 28px;
-    max-width: 22ch;
-  }
-
-  .id-contact {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px;
-    font-size: 0.92rem;
-  }
-
-  .id-contact li { margin-bottom: 8px; }
-
-  .id-contact .k {
-    display: inline-block;
-    width: 62px;
-    color: var(--ink-soft);
-  }
-
-  .credentials-label {
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    margin: 0 0 10px;
-  }
-
-  .credentials {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid var(--line-soft);
-    padding-top: 14px;
-    font-size: 0.88rem;
-  }
-
-  .credentials li {
-    padding: 6px 0;
-    border-bottom: 1px solid var(--line-soft);
-    color: var(--ink-soft);
-  }
-  .credentials li:last-child { border-bottom: none; }
-  .credentials strong { color: var(--ink); font-weight: 500; }
-
-  .sidebar-foot {
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    padding-top: 24px;
-  }
-
-  /* ---------- Main content ---------- */
-
-  main { padding: 64px 56px 96px; }
-
-  section { margin-bottom: 64px; }
-  section:last-child { margin-bottom: 0; }
-
-  .section-heading {
-    font-family: var(--serif);
-    font-size: 1.55rem;
-    font-weight: 600;
-    color: var(--indigo-deep);
-    margin: 0 0 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .summary p {
-    font-family: var(--serif);
-    font-size: 1.2rem;
-    line-height: 1.65;
-    color: var(--ink);
-    max-width: 62ch;
-    margin: 0;
-  }
-
-  /* Timeline */
-
-  .timeline {
-    position: relative;
-    padding-left: 28px;
-  }
-
-  .timeline::before {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 6px;
-    bottom: 6px;
-    width: 1px;
-    background: var(--line);
-  }
-
-  .entry {
-    position: relative;
-    padding-bottom: 32px;
-  }
-  .entry:last-child { padding-bottom: 0; }
-
-  .entry::before {
-    content: "";
-    position: absolute;
-    left: -28px;
-    top: 6px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--rose);
-    border: 2px solid var(--bg);
-    box-shadow: 0 0 0 1px var(--rose-soft);
-  }
-
-  .entry-dates {
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    margin-bottom: 4px;
-  }
-
-  .entry-role {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 0 0 2px;
-  }
-
-  .entry-org {
-    font-size: 0.92rem;
-    color: var(--indigo);
-    margin: 0 0 10px;
-  }
-
-  .entry-desc {
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-    max-width: 60ch;
-    margin: 0;
-  }
-
-  /* Education */
-
-  .edu-entry {
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .edu-entry:first-child { padding-top: 0; }
-  .edu-entry:last-child { border-bottom: none; }
-
-  .edu-degree {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 0 0 2px;
-  }
-
-  .edu-meta {
-    font-size: 0.88rem;
-    color: var(--indigo);
-    margin: 0 0 8px;
-  }
-
-  .edu-detail {
-    font-size: 0.92rem;
-    color: var(--ink-soft);
-    max-width: 62ch;
-    margin: 0;
-  }
-
-  /* Skills */
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 40px;
-  }
-
-  .skill-group-name {
-    font-size: 0.82rem;
-    color: var(--rose);
-    margin: 0 0 8px;
-  }
-
-  .skill-list {
-    font-size: 0.92rem;
-    color: var(--ink-soft);
-    margin: 0;
-    line-height: 1.7;
-  }
-
-  /* Publications */
-
-  .pub-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .pub-list li {
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line-soft);
-    max-width: 68ch;
-  }
-  .pub-list li:last-child { border-bottom: none; }
-
-  .pub-list .pub-title {
-    color: var(--ink);
-    font-weight: 500;
-  }
-
-  /* Awards */
-
-  .awards-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 14px;
-  }
-
-  .awards-list li {
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-    padding-left: 18px;
-    position: relative;
-  }
-
-  .awards-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 6px;
-    height: 6px;
-    background: var(--indigo);
-  }
-
-  .awards-list strong { color: var(--ink); font-weight: 500; }
-
-  /* ---------- Responsive ---------- */
-
-  @media (max-width: 860px) {
-    .layout { grid-template-columns: 1fr; }
-
-    .sidebar {
-      position: relative;
-      height: auto;
-      border-right: none;
-      border-bottom: 1px solid var(--line);
-      padding: 40px 24px 32px;
-    }
-
-    main { padding: 48px 24px 72px; }
-
-    .skills-grid { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="layout">
+<nav class="topnav">
+  <a class="brand" href="index.html">Kaushalya Perera</a>
+  <ul>
+    <li><a class="navlink" href="index.html" aria-current="page">Home</a></li>
+    <li><a class="navlink" href="publications.html">Publications</a></li>
+    <li><a class="navlink" href="cv.html">CV</a></li>
+    <li><a class="navlink" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <aside class="sidebar">
-    <div class="id-block">
-      <span class="id-tag">Portfolio</span>
-      <h1 class="id-name">Kaushalya Perera</h1>
-      <p class="id-title">Immunologist &amp; molecular biologist — immune cell identification and diagnostic assay development</p>
+<main>
 
-      <ul class="id-contact">
-        <li><span class="k">Email</span> <a href="mailto:aklperera@yahoo.com">aklperera@yahoo.com</a></li>
-        <li><span class="k">LinkedIn</span> <a href="https://linkedin.com/in/aklperera" target="_blank" rel="noopener">linkedin.com/in/aklperera</a></li>
-        <li><span class="k">Based in</span> Geelong, VIC</li>
-      </ul>
+  <section class="hero">
+    <img class="avatar" src="photo.jpg" alt="Kaushalya Perera">
 
-      <p class="credentials-label">Credentials</p>
-      <ul class="credentials">
-        <li><strong>PhD</strong>, Medicine — Deakin University</li>
-        <li><strong>Master's</strong>, Biotechnology &amp; Bioinformatics (High Distinction) — Deakin</li>
-        <li><strong>BSc (Hons)</strong>, Biomedical Science (First Class) — Northumbria University, UK</li>
-      </ul>
-    </div>
+    <h1 class="hero-name">Kaushalya Perera</h1>
+    <p class="hero-tagline">Immunologist &amp; molecular biologist, working on immune cell biology and diagnostic assay development.</p>
+    <p class="hero-affiliation">PhD in Medicine — Deakin University</p>
 
-    <p class="sidebar-foot">Curriculum vitae &amp; research portfolio</p>
-  </aside>
+    <hr class="divider">
 
-  <main>
+    <p class="link-row">
+      <a href="mailto:aklperera@yahoo.com">Email</a>
+      <span class="sep">·</span>
+      <a href="https://linkedin.com/in/aklperera" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <!-- Replace with her real Google Scholar URL when provided -->
+      <span class="placeholder">Google Scholar (link pending)</span>
+      <span class="sep">·</span>
+      <a href="https://www.researchgate.net/profile/Kaushalya-Perera-5" target="_blank" rel="noopener">ResearchGate</a>
+      <span class="sep">·</span>
+      <a href="https://orcid.org/0000-0002-1232-2627" target="orcid.widget" rel="me noopener noreferrer">ORCID <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="" style="width:0.9em; vertical-align:middle;"></a>
+    </p>
 
-    <section class="summary">
-      <h2 class="section-heading">Summary</h2>
-      <p>Kaushalya is an immunologist and molecular biologist with a PhD in Medicine from Deakin University, a Master of Biotechnology and Bioinformatics, and a BSc (Hons) in Biomedical Science. Over five years of hands-on research spans immune cell biology, cytokine receptor characterisation, molecular assay development, gene editing, imaging, and bioinformatic data analysis, complemented by prior diagnostic laboratory experience within an ISO-certified quality management system in Sri Lanka.</p>
-    </section>
+  </section>
 
-    <section>
-      <h2 class="section-heading">Experience</h2>
-      <div class="timeline">
+  <hr class="divider">
 
-        <div class="entry">
-          <div class="entry-dates">2020 – 2025</div>
-          <h3 class="entry-role">Graduate Researcher / PhD Candidate</h3>
-          <p class="entry-org">Deakin University</p>
-          <p class="entry-desc">Independently designed, executed, and troubleshot experiments identifying and validating NK cell marker candidates in a zebrafish model, including selecting candidate markers from a published single-cell dataset and performing motif analysis (FIMO) on novel gene promoters. Designed a transgenic zebrafish model incorporating GFP into the genome to track NK cells, generated CRISPR-based mutants, and used gene cloning, competent cell preparation, and whole-mount in-situ hybridisation (WISH) alongside immunofluorescence microscopy to characterise immune cell populations. Developed and validated qPCR, dPCR, HRM, and Sanger sequencing assays, and supervised undergraduate and junior research students.</p>
-        </div>
+  <section class="about">
+    <p>I am an immunologist and molecular biologist with a <strong>PhD in Medicine</strong> from Deakin University, where my doctoral research focused on identifying marker candidates for Natural Killer cells in a zebrafish model. My work bridges <strong>immune cell biology</strong>, <strong>molecular assay development</strong>, and <strong>bioinformatics</strong> — from designing a transgenic zebrafish model and CRISPR-based mutants, to analysing single-cell sequencing data and gene promoter motifs.</p>
 
-        <div class="entry">
-          <div class="entry-dates">2022 &amp; 2025</div>
-          <h3 class="entry-role">Graduate Research Teaching Fellow</h3>
-          <p class="entry-org">Deakin University</p>
-          <p class="entry-desc">Supervised undergraduate students in laboratory technique and experimental practice.</p>
-        </div>
+    <p>Before starting my PhD, I worked as a Scientific Officer at a hospital diagnostic laboratory in Sri Lanka, developing and validating immunological assays within an ISO-certified quality system. That experience shaped my interest in translating research technique into rigorous, audit-ready laboratory practice.</p>
 
-        <div class="entry">
-          <div class="entry-dates">Jan – Mar 2026</div>
-          <h3 class="entry-role">PBL Facilitator</h3>
-          <p class="entry-org">Deakin University, School of Medicine</p>
-          <p class="entry-desc">Facilitated small-group problem-based learning sessions for medical students.</p>
-        </div>
+    <p>Alongside the bench work, I've supervised and mentored junior researchers, contributed to a systematic review published in <em>PLOS Computational Biology</em>, and I'm always keen to pick up new techniques and systems quickly. More on my research can be found under <a href="publications.html">Publications</a>, and my full background under <a href="cv.html">CV</a>.</p>
+  </section>
 
-        <div class="entry">
-          <div class="entry-dates">2017 – 2019</div>
-          <h3 class="entry-role">Scientific Officer</h3>
-          <p class="entry-org">Nawaloka Hospital, Green Cross Laboratories — Sri Lanka</p>
-          <p class="entry-desc">Worked within PC1 and PC2 physical containment laboratories on qPCR-based donor blood screening for HIV, HBV, and HCV. Rotated through haematology and molecular microbiology, including blood film analysis, bacterial culture and identification, antimicrobial susceptibility phenotyping, and HLA typing for transplant and transfusion diagnostics. Developed, optimised, and validated immunological assays including ELISA-based cytokine profiling, and authored assay validation documentation within an ISO-certified, GLP/GMP-compliant quality system, alongside inventory, equipment calibration, and procurement.</p>
-        </div>
+</main>
 
-        <div class="entry">
-          <div class="entry-dates">During BSc</div>
-          <h3 class="entry-role">Human Genetics Laboratory Placement</h3>
-          <p class="entry-org">University of Colombo</p>
-          <p class="entry-desc">Six-month placement performing karyotyping for Down syndrome diagnosis, alongside patient counselling and clinical documentation.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-heading">Education</h2>
-
-      <div class="edu-entry">
-        <h3 class="edu-degree">PhD in Medicine</h3>
-        <p class="edu-meta">Deakin University, Waurn Ponds — 2026</p>
-        <p class="edu-detail">Thesis: evaluation of potential marker candidates for identification of Natural Killer cells in zebrafish. DUPR Scholarship recipient; winner, Deakin "Visualise Your Thesis" 2023.</p>
-      </div>
-
-      <div class="edu-entry">
-        <h3 class="edu-degree">Master of Biotechnology and Bioinformatics</h3>
-        <p class="edu-meta">Deakin University — High Distinction, 2021</p>
-        <p class="edu-detail">Characterised the cytokine receptor CRLF3 in zebrafish; analysed immune cell populations in a knockout mutant via CRISPR/Cas9 and qPCR. Vice Chancellor's Scholarship recipient.</p>
-      </div>
-
-      <div class="edu-entry">
-        <h3 class="edu-degree">BSc (Hons) Biomedical Science</h3>
-        <p class="edu-meta">Northumbria University, UK — First Class, 2017</p>
-        <p class="edu-detail">Larvicidal effects of Curcuma longa ethanol rhizome extract on Anopheles tessellatus; major coursework in immunology and genetics.</p>
-      </div>
-
-    </section>
-
-    <section>
-      <h2 class="section-heading">Skills</h2>
-      <div class="skills-grid">
-
-        <div>
-          <p class="skill-group-name">Immunological testing</p>
-          <p class="skill-list">ELISA (incl. cytokine profiling), flow cytometry analysis (FlowJo), multi-parameter panel design, Western blotting, WISH, immunohistochemistry</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Molecular biology</p>
-          <p class="skill-list">PCR, qPCR, dPCR, High Resolution Melt (HRM) analysis, DNA/RNA extraction, molecular &amp; gene cloning, competent cell preparation, genotyping, CRISPR/Cas9, Sanger sequencing, gel electrophoresis (agarose &amp; PAGE)</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Diagnostic laboratory</p>
-          <p class="skill-list">Infectious disease qPCR diagnostics (HIV/HCV/HBV), blood film analysis, bacterial culture &amp; identification, antimicrobial susceptibility phenotyping, HLA typing, serology &amp; blood grouping</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Imaging &amp; microscopy</p>
-          <p class="skill-list">Confocal and fluorescence microscopy, ImageJ analysis, histology (paraffin embedding, microtomy, H&amp;E staining), scientific illustration (Adobe Illustrator)</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Cell culture</p>
-          <p class="skill-list">Mammalian cell culture, adherent and suspension lines, sterile technique</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Quality &amp; compliance</p>
-          <p class="skill-list">ISO-certified QMS, GLP/GMP, audit-ready documentation, assay validation authorship, biosafety &amp; WHS compliance</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Data &amp; analysis</p>
-          <p class="skill-list">GraphPad Prism, R, statistical analysis, systematic review &amp; critical appraisal methodology, EndNote</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Sample &amp; lab management</p>
-          <p class="skill-list">Human biosample handling, biobanking &amp; sample tracking, equipment calibration, inventory &amp; consumables procurement</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Genomics &amp; bioinformatics</p>
-          <p class="skill-list">Single-cell sequencing data analysis, motif analysis (FIMO) for gene promoter investigation</p>
-        </div>
-
-        <div>
-          <p class="skill-group-name">Software</p>
-          <p class="skill-list">GraphPad Prism, R, Adobe Illustrator, Microsoft Office (Outlook, Word, Excel, PowerPoint)</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-heading">Publications</h2>
-      <ul class="pub-list">
-        <li><span class="pub-title">Taznin, T., Perera, K., et al. (2022).</span> CRLF3 contributes to early zebrafish hematopoiesis. Frontiers in Immunology, 13:910428.</li>
-        <li><span class="pub-title">Wijesooriya, K., Perera, K.L., et al. (2022).</span> Urgent need for consistent standards in functional enrichment analysis. PLOS Computational Biology, 18(3): e1009935.</li>
-        <li><span class="pub-title">Perera, K., et al. (2018).</span> Dengue: tetravalent live attenuated vaccine. Current Trends in Vaccine and Vaccinology, 1(1).</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-heading">Awards &amp; scholarships</h2>
-      <ul class="awards-list">
-        <li><strong>DUPR Scholarship</strong> — Deakin University Postgraduate Research Scholarship, PhD candidature</li>
-        <li><strong>Winner, "Visualise Your Thesis"</strong> — Deakin University, 2023</li>
-        <li><strong>Vice Chancellor's Scholarship</strong> — Deakin University, Master's candidature</li>
-      </ul>
-    </section>
-
-  </main>
-
-</div>
+<footer>
+  © 2026 Kaushalya Perera
+</footer>
 
 </body>
 </html>
